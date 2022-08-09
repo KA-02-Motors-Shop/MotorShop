@@ -1,5 +1,5 @@
 import { IUser, IUserCreate } from "./../../interfaces/user/user";
-import { User } from "./../../entities/entity";
+import { User } from "../../entities/User";
 import { AppDataSource } from "../../data-source";
 
 const userCreateService = async ({ name, email }: IUserCreate) => {

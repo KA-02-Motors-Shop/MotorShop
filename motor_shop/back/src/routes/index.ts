@@ -1,12 +1,10 @@
-// importamos o Router do express
 import { Router } from "express";
-// instanciamos o Router
+import anuncioRouter from "./anuncios.routes";
+import usuarioRouter from "./users.routes";
+
 const routes = Router();
-// importamos os Controllers
-import userListController from "../controllers/user/userList.controller";
-import userCreateController from "../controllers/user/userCreate.controller";
-// definimos as rotas
-routes.post("/users", userCreateController);
-routes.get("/users", userListController);
-// e exportamos as rotas
+
+routes.use("/anuncios", anuncioRouter);
+routes.use("/users", usuarioRouter);
+
 export default routes;
