@@ -26,6 +26,7 @@ export class User {
   // o Column e declarando elas como strings
   @Column()
   name: string;
+
   @Column()
   email: string;
   // aqui, definimos no contrutor da classe a geração automática
