@@ -1,4 +1,4 @@
-export interface ICreateAnuncio {
+export interface ICreateAnnouncement {
   title: string;
   year: number;
   km: number;

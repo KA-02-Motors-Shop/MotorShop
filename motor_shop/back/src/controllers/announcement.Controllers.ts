@@ -1,9 +1,9 @@
+import { Announcement } from "./../entities/Announcement";
 import { Request, Response } from "express";
 import { AppDataSource } from "../data-source";
-import { Anuncio } from "../entities/Anuncio";
-import CreateAnuncioService from "../services/anuncio/anuncioCreate.service";
+import CreateAnnouncementService from "../services/announcement/anuncioCreate.service";
 
-export class AnuncioController {
+export class AnnouncementController {
   static async store(request: Request, response: Response) {
     const {
       title,
@@ -15,7 +15,7 @@ export class AnuncioController {
       img_wlp,
       img_galery,
     } = request.body;
-    const anuncio = await CreateAnuncioService.execute({
+    const announcement = await CreateAnnouncementService.execute({
       title,
       year,
       km,
@@ -25,13 +25,13 @@ export class AnuncioController {
       img_wlp,
       img_galery,
     });
-    return response.status(201).json(anuncio);
+    return response.status(201).json(announcement);
   }
   static async index(request: Request, response: Response) {
-    const anuncioRepository = AppDataSource.getRepository(Anuncio);
+    const announcementRepository = AppDataSource.getRepository(Announcement);
 
-    const anuncio = await anuncioRepository.find();
+    const announcement = await announcementRepository.find();
 
-    return response.status(200).json(anuncio);
+    return response.status(200).json(announcement);
   }
 }
