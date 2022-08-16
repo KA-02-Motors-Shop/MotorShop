@@ -8,10 +8,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Inter";
-  h1 {
-    font-family: "Lexend";
-  }
 `;
 
 export const ImgContent = styled.img`

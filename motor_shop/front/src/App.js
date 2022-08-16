@@ -1,9 +1,8 @@
-import { CardProfile } from "./components/cardProfile";
-
+import { Profile } from "./page/profile";
 function App() {
   return (
     <>
-      <CardProfile />
+      <Profile />
     </>
   );
 }

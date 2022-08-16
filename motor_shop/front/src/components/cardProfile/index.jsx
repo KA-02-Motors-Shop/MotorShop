@@ -30,7 +30,7 @@ export const CardProfile = () => {
           </DivDescription>
         </ContentInfos>
         <DivButton>
-          <button>Criar Anuncio</button>
+          <button>Criar anuncio</button>
         </DivButton>
       </ContentProfile>
     </Container>
