@@ -1,5 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
-
+import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
 :root{
     --brand1: #4529e6;
@@ -56,9 +55,7 @@ export default createGlobalStyle`
     --button-medium-text: 14px;
     --input-placeholder: 16px;
     --input-label: 14px;
-
 }   
-
 * {
     box-sizing: border-box;
 }
@@ -153,5 +150,15 @@ export default createGlobalStyle`
   }
   button:hover {
     cursor: pointer;
+  }
+  body{
+    font-family: "Inter";
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Lexend";
   }
     `;
