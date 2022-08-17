@@ -8,7 +8,8 @@ import {
   InfoVehicle,
   AddButtonField,
 } from './style';
-export const ModalAnuncio = () => {
+export const Modal
+announcement = () => {
   return (
     <Container>
       <Header>

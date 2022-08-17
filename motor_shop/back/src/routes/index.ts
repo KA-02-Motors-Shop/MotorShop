@@ -1,10 +1,10 @@
 import { Router } from "express";
-import anuncioRouter from "./anuncios.routes";
+import announcementRouter from "./announcement.routes";
 import usuarioRouter from "./users.routes";
 
 const routes = Router();
 
-routes.use("/anuncios", anuncioRouter);
+routes.use("/announcements", announcementRouter);
 routes.use("/users", usuarioRouter);
 
 export default routes;
