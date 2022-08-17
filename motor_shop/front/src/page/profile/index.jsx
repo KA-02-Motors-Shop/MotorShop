@@ -1,41 +1,17 @@
 import { CardProfile } from "../../components/cardProfile";
 import { CardVehicle } from "../../components/cardVehicles";
-import { useState } from "react";
-import carro from "../../assets/teste.png";
-
+import { useEffect, useState } from "react";
+import api from "../../services/api.js";
 export const Profile = () => {
-  const [vehicles] = useState([
-    {
-      title: "TITULO MT LEGAL",
-      year: 2007,
-      km: 10000,
-      price: 15.5,
-      description: "DESCRICAO MT MANEIRINHA DEE SE LER",
-      veicle_type: "carro",
-      img_wlp: carro,
-      img_galery: "saldkasldk",
-    },
-    {
-      title: "TITULO MT LEGAL",
-      year: 2007,
-      km: 10000,
-      price: 37162371263721362176,
-      description: "DESCRICAO MT MANEIRINHA DEE SE LER",
-      veicle_type: "carro",
-      img_wlp: carro,
-      img_galery: "saldkasldk",
-    },
-    {
-      title: "TITULO MT LEGAL",
-      year: 2007,
-      km: 10000,
-      price: 15.5,
-      description: "DESCRICAO MT MANEIRINHA DEE SE LER",
-      veicle_type: "carro",
-      img_wlp: carro,
-      img_galery: "saldkasldk",
-    },
-  ]);
+  const [vehicles, setVehicles] = useState([]);
+  useEffect(() => {
+    api
+      .get("/announcements")
+      .then((res) => setVehicles(res.data))
+      .catch((err) => {
+        console.error(`Ocorreu um erro ${err}`);
+      });
+  }, []);
 
   return (
     <>
