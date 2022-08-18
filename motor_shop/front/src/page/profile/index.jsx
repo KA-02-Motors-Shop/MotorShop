@@ -12,11 +12,14 @@ export const Profile = () => {
         console.error(`Ocorreu um erro ${err}`);
       });
   }, []);
-
+  const filter = (vehicle) => {
+    return vehicles.filter((item) => item.veicle_type === vehicle);
+  };
   return (
     <>
       <CardProfile />
-      <CardVehicle vehicles={vehicles} type="carro" />
+      <CardVehicle vehicles={filter("Carro")} type="Carro" />
+      <CardVehicle vehicles={filter("Moto")} type="Motos" />
     </>
   );
 };

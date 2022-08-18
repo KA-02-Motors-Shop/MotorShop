@@ -4,12 +4,21 @@ export const Container = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  overflow: auto;
+  margin-top: 15px;
   h1 {
     font-size: 24px;
     margin-bottom: 62px;
   }
   padding: 10px;
+  overflow: auto;
+  ::-webkit-scrollbar {
+    height: 5px;
+    background: var(--grey5);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--grey3);
+    border-radius: 10px;
+  }
 `;
 export const ListVehicle = styled.div`
   display: flex;
@@ -26,6 +35,10 @@ export const ImgVehicle = styled.div`
   text-align: center;
   margin-bottom: 16px;
   border: 2px solid var(--grey7);
+  img {
+    width: 262px;
+    min-height: 150.28px;
+  }
 `;
 export const ContentDescription = styled.div`
   h3,
