@@ -2,6 +2,7 @@ import { CardProfile } from "../../components/cardProfile";
 import { CardVehicle } from "../../components/cardVehicles";
 import { useEffect, useState } from "react";
 import api from "../../services/api.js";
+import { ModalAnnouncement } from "../../components/modalAnnouncement";
 export const Profile = () => {
   const [vehicles, setVehicles] = useState([]);
   useEffect(() => {
@@ -20,6 +21,7 @@ export const Profile = () => {
       <CardProfile />
       <CardVehicle vehicles={filter("Carro")} type="Carro" />
       <CardVehicle vehicles={filter("Moto")} type="Motos" />
+      <ModalAnnouncement/>
     </>
   );
 };
