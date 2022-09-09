@@ -46,6 +46,19 @@ export const ContentDescription = styled.div`
   div {
     margin-bottom: 16px;
   }
+  p {
+    font-weight: var(--body-1-400);
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--grey2);
+  }
+  h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--grey1);
+  }
 `;
 export const VehicleInfos = styled.div`
   display: flex;
@@ -67,19 +80,28 @@ export const VehicleInfos = styled.div`
     }
   }
 `;
-export const ContentButtons = styled.div`
-  button {
-    border: 2px solid var(--grey1);
-    border-radius: 4px;
-    padding: 12px 20px;
-    color: var(--grey1);
-    font-size: var(--button-medium-text);
-    font-weight: var(--body-1-600);
-    margin-right: 16px;
-    :hover {
-      transition: 0.4s;
-      background: var(--grey1);
-      color: var(--grey10);
-    }
+
+export const ProfileDiv = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--grey2);
+  }
+  .word {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--brand1);
+    color: var(--whiteFixed);
+    font-weight: var(--body-2-500);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
   }
 `;

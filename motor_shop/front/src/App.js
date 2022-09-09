@@ -1,8 +1,9 @@
-import { Profile } from "./page/profile";
+import { RoutesApp } from "./routes";
+
 function App() {
   return (
     <>
-      <Profile />
+      <RoutesApp />
     </>
   );
 }

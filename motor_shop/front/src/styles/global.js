@@ -58,6 +58,7 @@ export default createGlobalStyle`
 }   
 * {
     box-sizing: border-box;
+    
 }
   html,
   body,

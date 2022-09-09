@@ -8,7 +8,7 @@ import {
   VehicleInfos,
 } from "./styles";
 import { CurrencyFormatter } from "../../services/formatters";
-export const CardVehicle = ({ vehicles, type }) => {
+export const CardVehicleOwner = ({ vehicles, type }) => {
   return (
     <Container>
       <h1>{type}</h1>
