@@ -10,7 +10,7 @@ import {
 } from './style';
 import { Button } from '../button/index';
 import x from '../../assets/x.svg';
-export const Modalannouncement = () => {
+export const ModalAnnouncement = () => {
   return (
       <Container>
         <Header>
