@@ -9,10 +9,11 @@ export const Container = styled.div`
   gap: 37px;
   margin: 0 auto;
   background-color: var(--whiteFixed);
-  z-index: auto;
+  position: absolute;
   width: 346px;
   height: 1241px;
-  left: 10px;
+  left: 50%;
+  transform: translate(-50%);
   top: 94px;
   border-radius: 8px;
   input{
