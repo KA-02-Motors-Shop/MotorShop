@@ -16,8 +16,13 @@ export const Container = styled.div`
   transform: translate(-50%);
   top: 94px;
   border-radius: 8px;
-  input{
-    height: 48px;
+  border: 1px solid black;
+  background: #ffffff;
+  @media (min-width: 700px) {
+    width: 520px;
+    height: 1252px;
+    top: 80px;
+    border-radius: 8px;
   }
 `;
 
@@ -27,9 +32,8 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 16px 0px;
-  width: 314px;
   height: 56px;
-  background: var(--whiteFixed) ;
+  background: var(--whiteFixed);
   flex: none;
   order: 0;
   align-self: stretch;
@@ -51,7 +55,7 @@ export const Header = styled.div`
 export const ContentAd = styled.div`
   display: flex;
   flex-direction: column;
-  
+  width: 97%;
   .TitleBTT {
     width: 151px;
     height: 24px;
@@ -68,7 +72,7 @@ export const ContentAd = styled.div`
   .row {
     display: flex;
   }
-  `;
+`;
 
 export const SellButton = styled.button`
   box-sizing: border-box;
@@ -107,7 +111,7 @@ export const AuctionButton = styled.button`
   gap: 10px;
   width: 154.5px;
   height: 48px;
-  border: 1.5px solid; 
+  border: 1.5px solid;
   border-color: var(--grey4);
   border-radius: 4px;
   flex: none;
@@ -120,10 +124,6 @@ export const DivAdInfos = styled.div`
   flex-direction: column;
   align-self: flex-start;
   width: fill-available;
-  input{
-    border: 1px solid;
-    border-color: var(--grey4);
-  }
   .TitleBTT {
     font-family: 'Inter';
     font-style: normal;
@@ -135,16 +135,50 @@ export const DivAdInfos = styled.div`
     flex: none;
     flex-grow: 0;
   }
+  .imagesBlock {
+    width: inherit;
+    margin: 10px 0;
+    p {
+      margin: 10px 0;
+    }
+  }
 `;
 
 export const InfoVehicle = styled.div`
   display: flex;
   justify-content: space-around;
-  input{
-    width: 120px;
+  flex-wrap: wrap;
+  .priceDiv {
+    width: -webkit-fill-available;
+    margin-right: 0;
   }
-  div{
+  .priceInput {
+    width: -webkit-fill-available;
+  }
+  input {
+    width: 152.5px;
+  }
+  div {
     width: 120px;
+    margin-right: 36px;
+  }
+  @media (min-width: 700px) {
+    justify-content: start;
+    .priceDiv {
+      width: 120px;
+      height: 68px;
+    }
+    .priceInput {
+      width: 148px;
+      height: 48px;
+    }
+    div{
+      width: 148px;
+      margin-right: 21px;
+    }
+    input{
+      width: 148px;
+    }
   }
 `;
 
@@ -156,7 +190,6 @@ export const AddButtonField = styled.button`
   align-items: center;
   padding: 12px 20px;
   gap: 10px;
-  width: 314px;
   height: 38px;
   background: #edeafd;
   border: 1.5px solid #edeafd;
@@ -168,11 +201,10 @@ export const AddButtonField = styled.button`
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13.7px;
   line-height: 0px;
   color: #4529e6;
   flex: none;
   order: 0;
   flex-grow: 0;
 `;
-
