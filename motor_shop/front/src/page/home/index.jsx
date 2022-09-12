@@ -21,6 +21,7 @@ export const Home = () => {
   return (
     <Container>
       <BannerComponent />
+      <CardVehicleUser vehicles={filter("Carro")} type="Carro" />
       <CardVehicleUser vehicles={filter("Moto")} type="Moto" />
     </Container>
   );
