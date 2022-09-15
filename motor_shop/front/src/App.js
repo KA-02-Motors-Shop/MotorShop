@@ -1,8 +1,10 @@
-import { Profile } from "./page/profile";
+import { Footer } from "./components/Footer";
+import { RoutesApp } from "./routes";
 function App() {
   return (
     <>
-      <Profile />
+      <RoutesApp />
+      <Footer />
     </>
   );
 }

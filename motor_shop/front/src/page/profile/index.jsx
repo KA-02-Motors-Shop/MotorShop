@@ -1,5 +1,5 @@
 import { CardProfile } from "../../components/cardProfile";
-import { CardVehicle } from "../../components/cardVehicles";
+import { CardVehicleOwner } from "../../components/cardVehiclesOwner";
 import { useEffect, useState } from "react";
 import api from "../../services/api.js";
 import { ModalAnnouncement } from "../../components/modalAnnouncement";
@@ -19,9 +19,9 @@ export const Profile = () => {
   return (
     <>
       <CardProfile />
-      <CardVehicle vehicles={filter("Carro")} type="Carro" />
-      <CardVehicle vehicles={filter("Moto")} type="Motos" />
-      <ModalAnnouncement/>
+      <CardVehicleOwner vehicles={filter("Carro")} type="Carro" />
+      <CardVehicleOwner vehicles={filter("Moto")} type="Motos" />
+      {/* <ModalAnnouncement/> */}
     </>
   );
 };
